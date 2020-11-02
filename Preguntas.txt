@@ -1,0 +1,11 @@
+- ¿En qué consiste la espera activa o busy waiting? ¿Por qué es negativa?
+En que un hilo constantemente esté preguntando algo para poder avanzar(está activo durante la espera, esto es, ejecutando código).
+Es negativa porque ese hilo estará consumiendo CPU que no consumiría, por ejemplo, si estuviera en un wait o en un sleep.
+
+
+
+- En el ejercio que se describe en el apartado 4.5 y en el vídeo 26
+ ¿por qué es necesario que la variable currentColor de la clase LightSystem sea volatile?
+Porque es una carrera, si no se actualiza el caché de todos los coches sobre el sistema de luces
+a la vez, podría salir uno antes y no sería justo.
+
